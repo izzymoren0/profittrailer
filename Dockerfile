@@ -9,7 +9,7 @@ ADD https://github.com/taniman/profit-trailer/releases/download/${PT_VER}/Profit
 RUN unzip -jqd /app /app/ProfitTrailer-${PT_VER}.zip ProfitTrailer-${PT_VER}/ProfitTrailer.jar && \
     rm /app/ProfitTrailer-${PT_VER}.zip
 
-VOLUME [ "/app" ]
+VOLUME [ "/app/data", "/app/logs" ]
 
 EXPOSE 8081
 
